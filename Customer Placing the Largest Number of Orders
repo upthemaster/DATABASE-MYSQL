@@ -1,0 +1,12 @@
+-- Problem -> Customer Placing the Largest Number of Orders
+SELECT customer_number 
+-- we want customer_number as final result
+FROM Orders
+-- we have to find max placed order's customer_number from Orders table 
+GROUP BY customer_number 
+-- GROUP BY groups all rows from Orders table by its customer_number
+ORDER BY COUNT(*)  DESC
+-- ORDER BY counts eacch row from Orders table by its customer_number
+-- DESC is used for descending order
+LIMIT 1; 
+-- LIMIT 1 is used to return the first row from sorted list
